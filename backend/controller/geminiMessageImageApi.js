@@ -20,7 +20,7 @@ const  geminiMessageImageApi = async (req, res) => {
         );
 
         const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-        const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
+        const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash-lite" });
 
         // Default to an empty string if no text is provided
         const userInputText = req.body.text || ""; 
